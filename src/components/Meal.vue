@@ -46,6 +46,7 @@
           height="360"
           :src="videoUrl"
           frameborder="0"
+          allowfullscreen
         ></iframe>
       </div>
     </div>
