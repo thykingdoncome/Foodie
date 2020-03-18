@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="app-header">
     <div>
       <span class="logo"
         >F<i class="fas fa-apple-alt"></i
@@ -30,41 +30,53 @@ export default {
 </script>
 
 <style scoped>
-.header {
-    background: #FBD791;
+@media screen and (min-width: 780px) {
+  .app-header {
+    /* background: #fbd791; */
+    color: rgb(21, 99, 99);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     padding-bottom: 1em;
-}
+  }
 
-.logo {
+  .logo {
     font-size: 2em;
     letter-spacing: 7px;
     font-weight: bold;
-}
+  }
 
-.contact-wrapper {
-   display: flex;
-   align-items: center;
-   flex-wrap: wrap;
-}
+  .contact-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-.contact-wrapper span:nth-of-type(1) {
+  .contact-wrapper span:nth-of-type(1) {
     padding-right: 2em;
-}
+  }
 
-.contact {
-    font-size: .9em;
-}
+  .contact {
+    font-size: 0.9em;
+  }
 
-.contact a {
-     color:  rgb(21, 99, 99);
-     text-decoration: none;
-}
-
-.contact a:hover {
+  .contact a:hover {
     text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .app-header {
+    color: rgb(21, 99, 99);
+    padding-bottom: 1em;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  .contact-wrapper {
+    display: none;
+  }
 }
 </style>

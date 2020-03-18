@@ -36,24 +36,23 @@
       </div>
     </div>
 
-    <div >
+    <div>
       <h3 class="header-text">Step by Step Video Guide</h3>
-     
-     <div class="video">
-        <iframe
-        type=""
-        width="640"
-        height="360"
-        :src="videoUrl"
-        frameborder="0"
-      ></iframe>
-     </div>
 
+      <div class="video">
+        <iframe
+          type=""
+          width="640"
+          height="360"
+          :src="videoUrl"
+          frameborder="0"
+        ></iframe>
+      </div>
     </div>
 
     <div class="source">
-        <h6>Source: {{ source }}</h6>
-      </div>
+      <h6>Source: <a :href="source"> {{ source }} </a></h6>
+    </div>
   </div>
 </template>
 
@@ -182,8 +181,46 @@ iframe {
 }
 
 .source {
-  padding: 1em 1em ;
+  padding: 1em 1em;
   background: white;
   text-align: end;
+}
+
+@media screen and (max-width: 780px) {
+  .details {
+    padding: 1em 0;
+  }
+
+  .details div {
+    width: 100%;
+    line-height: 30px;
+  }
+
+  .details div:nth-of-type(2) {
+    padding-top: 1em;
+  }
+
+  li {
+    padding-bottom: 0.3em;
+  }
+
+  .title {
+    font-size: 0.7em;
+    text-decoration: underline;
+  }
+
+  .header-text {
+    padding-bottom: 0.3em;
+  }
+
+  .image {
+    margin: 1em 0;
+    padding: 0;
+    height: 50vh;
+  }
+
+  .video {
+    height: 50vh;
+  }
 }
 </style>
